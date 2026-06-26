@@ -43,6 +43,23 @@ Python, pandas, numpy, matplotlib, statsmodels, scikit-learn, Prophet
 | Moving Average | 5741.52 | 7356.41 | 15.91% |
 | ARIMA | 6077.12 | 7707.94 | 16.83% |
 
+## Visualizations
+
+### Daily Average Energy Consumption
+![Daily Average Energy Consumption](results/Daily%20Average%20Energy%20Consumption.png)
+
+### Energy Consumption in 2010
+![Energy Consumption in 2010](results/Energy%20Consumption%20in%202010.png)
+
+### Decomposition of the Series
+![Decompose the Series](results/Decompose%20the%20Series.png)
+
+### ACF and PACF Plots
+![ACF and PACF plots](results/ACF%20and%20PACF%20plots.png)
+
+### Model Predictions vs Actual
+![Model Predictions vs Actual](results/Model%20Predictions%20vs%20Actual.png)
+
 ## Conclusion
 
 Prophet performed the best out of all five models, with the lowest error across MAE, RMSE, and MAPE. It was the only model that captured both the weekly pattern and the rising trend going into summer at the same time. SARIMA correctly picked up the weekly seasonality but missed the yearly trend since it was only set up to look at a 7-day cycle. ARIMA performed the worst, even worse than the moving average baseline, because with no seasonal component its 90-day forecast flattens out toward the average instead of following the trend. Linear Regression landed in the middle, but its sawtooth-shaped predictions show it wasn't learning a meaningful pattern from the day-of-week feature.
